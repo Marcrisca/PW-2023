@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Form Pemesanan Barang</title>
+</head>
+<body style="background-color:rgb(221, 221, 221)">
+
+    <form action="Page2.html" methode="POST">
+
+    <fieldset style="background-color:rgb(197, 197, 197)">
+
+    <h4 ; align="center" 
+    ; style="font-family:Verdana, Geneva, Tahoma, sans-serif;"> 
+    A Web Page</h4>
+
+    <p>&#x21E6; &#x21E8; &#x2716; &#x1F3D8;</p>
+    
+
+    <fieldset style="background-color:rgb(255, 255, 255)">
+    <div class="topnav" align="center">
+    <input type="text" placeholder="https://"><input type="text" placeholder="Search..">
+    </div>
+    </fieldset>
+
+    <fieldset style="background-color:white">
+    <p align="center">Home  | Generate Link | Transaction History | Policy | Logout</p>
+    </fieldset>
+
+    <tr>
+    <td rowspan="5" style="width: 30%">
+    <img style="width: 50%" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTiZ_vQRvYyjuVxmc8VBaZqxvOt5P_ex_7mb4S6_ET3vn3lVjC1QwykLOMzKvnZeLI3quEyTSMqeax0oVa6ibCm1kqQI2BpF4vPeEDp7fhn4WWET5wKXuEY&usqp=CAE" 
+    alt="MB" />
+    </tr>
+    <br>
+
+    <button type="button">Upload Picture</button>
+    <br>
+    <label for="Ttl">Title Here:</label>
+    <input type="text" id="Ttl">
+    <br>
+    <label for="Description">Description:</label>
+    <textarea id="Description" name="Description" rows="4" cols="50">
+    </textarea>
+    <br>
+    <label for="acc">Account Number:</label>
+    <input type="number" id="acc">
+    <br>
+    Bank:
+        <select name="Bank">
+        <option>HSBC</option>
+        <option>BCA</option>
+        <option>BRI</option>
+        <option>BNI</option>
+        <option>Cimb Niaga</option>
+        </select>
+    <br>
+    <label for="Hold">Account Holder:</label>
+    <input type="text" id="Hold">
+    <br>
+    Transaction : <input type="number">
+    <p>*if the transactionis for 3 person, choose 3 from the up list</p>
+
+    <input type="checkbox" id="mp" name="mp" value="">
+    <label for="mp">Send to Mobile Phone</label>
+    <br>
+    <input type="checkbox" id="ml" name="ml" value="">
+    <label for="ml">Send to Email</label>
+    <br>
+
+    <br>
+    <label for="mphone">Send to Mobile Phone:</label>
+    <input type="number" id="mphone">
+
+    <br>
+    <label for="mailE">Send to Email:</label>
+    <input type="text" id="mailE">
+    <br>
+
+    <br>
+    <input type="button" style="background-color:rgb(0, 139, 63);color:white;width:150px;
+    height:40px;" value="Generate Nabr Link">
+    </body>
+</html>
