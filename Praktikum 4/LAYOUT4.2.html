@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout4.2</title>
+    <style>
+        ul {
+            font-size: small;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            font-size: small;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.contact) {
+            background-color: hsl(0, 0%, 7%);
+        }
+
+        .contact {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(243, 177, 34);
+        }
+
+        .kolom1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(252, 249, 255);
+            width: 70%;
+            height: 400px;
+            float: left;
+        }
+
+        .kolom2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(255, 228, 140);
+            width: 30%;
+            align-items: center;
+            text-align: center;
+            height: 467px;
+            float: left;
+        }
+
+        .footer{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+            width: 97%;
+            height: 70px;
+            float: left;  
+            text-align: center; 
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #fff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <header style="background-color: white; height: 100px;">
+            <img src="moccatunelogo.png" alt="Moccatune Logo" width="20%" ; style="display:block; margin:auto;">
+        </header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="https://www.youtube.com/channel/UC-q40m5yttg2KJpcYj2jUcQ">Youtube</a></li>
+                    <li><a href="https://www.instagram.com/moccatune/">Instagram</a></li>
+                    <li><a href="https://twitter.com/moccatune_id">Twitter</a></li>
+                    <li><a href="https://trakteer.id/moccatune">Trakteer</a></li>
+                    <li style="float:right"><a class="contact" href="https://wa.me/081219131105">Contact Tehmin</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="kolom1">
+            <article class="mocca">
+                <section style="background-color: rgba(231, 175, 70, 0.603);">
+                    <h2 style="background-color: beige;">Apa Itu Moccatune?</h2>
+                    <p>Moccatune adalah <b>sebuah grup indie yang berisi musisi dan ilustrator</b>. Bersama, mereka membentuk sebuah grup yang menciptakan karya layaknya grup bisa digambarkan seperti Honeyworks dan Supercell.</p>
+                </section>
+                <section style="background-color: rgba(231, 175, 70, 0.603);">
+                    <h2 style="background-color: beige;">Kenapa Namanya Moccatune?</h2>
+                    <p>Moccatune itu berasal dari penggabungan dua kata, yaitu <b>Mocca dan Tunes.</b>
+                        Tune disini berarti alunan nada atau melody yang lucu dan menyenangkan, lalu mengapa Mocca, karena nama Mocca selain menggambarkan minuman, Mocca itu melambangkan warna yg tidak terlalu tua dan tidak terlalu muda, filosofinya, yang kita artikan sebagai masa remaja. Jadi bisa dibilang arti keseluruhan <b>Moccatune adalah nada nada remaja.</b></p>
+                </section>
+                <section style="background-color: rgba(231, 175, 70, 0.603);">
+                    <h2 style="background-color: beige;">Moccatune Mengisi OST Game</h2>
+                    <p>Moccatune bekerjasama dengan <b>Eternal Dream dan Niji Games</b> lewat game <b>Menggapai Mentari.</b>
+                        Game yang memiliki judul <b>Internasional The Sun Shines Over Us</b> ini kini mengumumkan kerja sama terbarunya dengan grup musik indie unik, yaitu Moccatune. Kerja sama tersebut akhirnya melahirkan original soundtrack (OST) dengan judul <b>"Kisah Ini".</b>
+                        Melalui siaran persnya, Moccatune menjelaskan bahwa lagu “Kisah Ini” menceritakan tentang perjuangan seseorang untuk bisa melewati traumanya. Perasaan takut akan kehilangan orang-orang yang dicintai tetap ada meskipun sudah memiliki teman-teman yang baik dan lingkungan yang sempurna.</p>
+                </section>
+            </article>
+        </div>
+        <div class="kolom2">
+            <aside>
+                <h3>OFFICIAL MUSIC VIDEO 'KISAH INI'</h3>
+                <iframe width="390" height="200" src="https://www.youtube.com/embed/4Ryti7SK2uY?si=Glb5DIFf-8TeMqRe&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <h3>MOCCATUNE'S CAFE</h3>
+                <iframe width="390" height="140" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4057083.952426993!2d107.10276464631674!3d-6.770333630124425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb7d53ea9963%3A0x406f453821dea425!2sTadakopi%20by%20Roomatada!5e0!3m2!1sid!2sid!4v1697707964080!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </aside>
+        </div>
+        <div class="footer">
+            <section>
+                <footer>
+                     <legend>THANK YOU</legend>
+                    <p>☎️ Perform/Gigs : 082232171413 / @arifiarauzan |
+                        🧰 NEXT STAGE @creatopia_octaverse @prj.sby |
+                        📢 MELANGKAH (OST. CREATOPIA)</p>
+                </footer>
+                    </div>
+           </section>
+    </fieldset>
+</body>
+</html>
