@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risca Marcella Jhesica UTS Form11 0110123010</title>
+    <style>
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Pembayaran label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .button button {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .button button[type="reset"] {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form method="post" action="">
+            <fieldset>
+                <legend>
+                    <h2>Booking Periksa Kesehatan Gigi</h2>
+                </legend>
+                <div class="form-group">
+                    <label for="nama">Nama Pasien:</label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+                <div class="form-group">
+                    <label for="Dokter">Pilih Dokter:</label>
+                    <select name="Dokter" id="Dokter">
+                        <option value="amelia">Drg. Amelia</option>
+                        <option value="arya">Drg. Arya</option>
+                        <option value="aftiya">Drg. Fatiya</option>
+                        <option value="nana">Drg. Nana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="layanan">Pilih layanan:</label>
+                    <select name="layanan" id="layanan">
+                        <option value="anak">Perawatan Gigi Anak</option>
+                        <option value="remaja">Perawatan Gigi Remaja</option>
+                        <option value="dewasa">Perawatan Gigi Dewasa</option>
+                        <option value="lansia">Perawatan Gigi Lansia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Keluhan">Keluhan:</label>
+                    <textarea id="Keluhan" name="Keluhan" rows="4" cols="50"></textarea>
+                </div>
+                <div id="Pembayaran">
+                    <label for="Pembayaran">Pembayaran:</label>
+                    <input type="checkbox" id="Pembayaran1" name="Pembayaran1" value="Cash">
+                    <label for="Pembayaran1"> Cash</label>
+                    <input type="checkbox" id="Pembayaran2" name="Pembayaran2" value="Transfer">
+                    <label for="Pembayaran1"> Cash</label>
+                    <input type="checkbox" id="Pembayaran3" name="Pembayaran3" value="eWallet">
+                    <label for="Pembayaran3"> eWallet</label>
+                    <br>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Periksa:</label>
+                    <input type="date" id="tanggal" name="tanggal_periksa">
+                </div>
+                <div class="form-group">
+                    <label for="umur">Umur:</label>
+                    <input type="number" id="umur" name="umur">
+                </div>
+                <div class="form-group">
+                    <label for="hp">No Telepon/HP:</label>
+                    <input type="tel" id="hp" name="hp">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="tempat_Email">
+                </div>
+                <div class="form-group button">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
