@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 2px;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header, .footer {
+            flex: 0 0 100%;
+            background: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            margin: 5px;
+        }
+
+        .aside, .article {
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .aside {
+            background-color: chocolate;
+            width: 25%;
+            height: 50em;
+        }
+
+        .article {
+            background-color: chartreuse;
+            width: 75%;
+        }
+
+        table {
+            width: 500px;
+            height: 450px;
+            border-radius: 5%;
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .image{
+            width: 20%;
+            float: left;
+            display: flex;
+        }
+        img{
+            padding: 20px;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="main-content">
+            <div class="aside">aside</div>
+            <div class="article">
+                <h2>article</h2>
+                <div class="image">
+                <img src="img/image1.jpg" alt="Image 1">
+                <img src="img/image2.jpg" alt="Image 2">
+                <img src="img/image3.jpg" alt="Image 3">
+            </div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
