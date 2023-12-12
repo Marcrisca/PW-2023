@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Kurs Dollar</title>
+    <script>
+        function hitung_kurs(){
+            const kurs = 14650;
+
+            let rupiahInput = document.getElementById("rupiah").value;
+            let dollar = rupiahInput / kurs;
+
+            let _hasil = document.getElementById("hasil");
+            _hasil.innerHTML = dollar;  
+        }
+    </script>
+</head>
+<body>
+    <h1>Menghitung Kurs Dollar</h1>
+    Jumlah Rupiah: 
+    <input type="number" id="rupiah">
+    <br><br>
+    <button onclick="hitung_kurs()">Hitung Kurs Dollar</button>
+    <br><hr>
+    <h2>Jumlah Dollar</h2>
+    <span id="hasil"></span>
+</body>
+</html>
