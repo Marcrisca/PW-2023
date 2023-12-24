@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#chatbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#container {
+    border: 2px solid rgb(0, 0, 0); 
+    padding: 10px;
+    flex: 1;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+#pesan {
+    width: calc(100% - 20px);
+    border: 2px solid rgb(0, 0, 0); 
+}
+
+#tulis-pesan {
+    display: flex;
+}
+
+#kirim-button {
+    margin-left: 10px;
+    background-color: #585858;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

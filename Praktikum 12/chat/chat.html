@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function kirim() {
+            var pesanInput = document.getElementById("pesan").value;
+            var inputContainer = document.getElementById("container");
+            if (pesanInput.trim() !== "") {
+                var pesanBaru = document.createElement("div");
+                pesanBaru.textContent = pesanInput;
+                inputContainer.appendChild(pesanBaru);
+                document.getElementById("pesan").value = "";
+                inputContainer.scrollTop = inputContainer.scrollHeight;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="chatbox-container">
+        <div id="container"></div>
+        <div id="tulis-pesan">
+            <textarea id="pesan" placeholder="Tulis pesan..."></textarea>
+            <button id="kirim-button" onclick="kirim()">Kirim</button>
+        </div>
+    </div>
+</body>
+
+</html>

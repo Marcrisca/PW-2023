@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function image_picker() {
+            const daftar_gambar = ["sapi.jpg", "kucing.jpg", "panda.jpg", "ayam.jpg", "bebek.jpg", "kambing.jpg"];
+            let pilihan = document.getElementById("option").value;
+
+            if (pilihan === "sapi") {
+                let select = daftar_gambar[0];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if (pilihan === "kucing") {
+                let select = daftar_gambar[1];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if (pilihan === "panda") {
+                let select = daftar_gambar[2];
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+            if (pilihan === "ayam") {
+                let select = daftar_gambar[3]; // Ganti indeks menjadi 3
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if (pilihan === "bebek") {
+                let select = daftar_gambar[4]; // Ganti indeks menjadi 4
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if (pilihan === "kambing") {
+                let select = daftar_gambar[5]; // Ganti indeks menjadi 5
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+        }
+    </script>
+    <style>
+
+fieldset {
+    width: 30%;
+    margin: 0 auto; 
+}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>
+<h1>Image Picker</h1>
+        </legend>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar :</option>
+        <option value="sapi">Sapi</option>
+        <option value="kucing">Kucing</option>
+        <option value="panda">Panda</option>
+        <option value="ayam">Ayam</option>
+        <option value="bebek">Bebek</option>
+        <option value="kambing">Kambing</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px">
+    </div>
+</fieldset>
+</body>
+
+</html>

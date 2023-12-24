@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pemesanan Tiket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">Formulir Pemesanan Tiket</h1>
+    <form id="form-pemesanan" onsubmit="validasiForm(event)">
+        <div class="form-group">
+            <label for="nama">Nama Pelanggan:</label>
+            <input type="text" class="form-control" id="nama" name="nama" maxlength="30" required>
+            <span id="error-nama" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <span id="error-email" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="jam">Jam Keberangkatan:</label>
+            <input type="text" class="form-control" id="jam" name="jam" placeholder="Format: 12.30" required>
+            <span id="error-jam" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="tujuan">Tujuan Keberangkatan:</label>
+            <input type="text" class="form-control" id="tujuan" name="tujuan" required>
+            <span id="error-tujuan" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="jumlah">Jumlah Tiket:</label>
+            <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="10" required>
+            <span id="error-jumlah" class="error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="hasil-pemesanan" style="display: none;" class="mt-4">
+        <h2>Detail Pemesanan:</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><b id="hasil-nama">Nama Pelanggan:</b></li>
+            <li class="list-group-item"><b id="hasil-email">Email:</b></li>
+            <li class="list-group-item"><b id="hasil-jam">Jam Keberangkatan:</b></li>
+            <li class="list-group-item"><b id="hasil-tujuan">Tujuan Keberangkatan:</b></li>
+            <li class="list-group-item"><b id="hasil-jumlah">Jumlah Tiket:</b></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    </script>
+</body>
+    <script>
+        function validasiForm(event) {
+            event.preventDefault();
+
+            resetErrorMessages();
+
+            var nama = document.getElementById("nama").value;
+            if (nama.trim() === "" || nama.length > 30) {
+                displayErrorMessage("error-nama", "Nama harus diisi (maksimum 30 karakter).");
+            }
+
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                displayErrorMessage("error-email", "Format email tidak valid.");
+            }
+
+            var jam = document.getElementById("jam").value;
+            var jamRegex = /^([01]\d|2[0-3]):([0-5]\d)$/;
+            if (!jamRegex.test(jam)) {
+                displayErrorMessage("error-jam", "Format jam tidak valid (00.00 - 23.59).");
+            }
+
+            var tujuan = document.getElementById("tujuan").value;
+            if (tujuan.trim() === "") {
+                displayErrorMessage("error-tujuan", "Tujuan keberangkatan harus diisi.");
+            }
+
+            var jumlah = document.getElementById("jumlah").value;
+            if (isNaN(jumlah) || jumlah < 1 || jumlah > 10) {
+                displayErrorMessage("error-jumlah", "Jumlah tiket harus angka antara 1 - 10.");
+            }
+
+            if (!hasError()) {
+                displayHasilPemesanan();
+            }
+        }
+
+        function displayErrorMessage(id, message) {
+            var errorElement = document.getElementById(id);
+            errorElement.textContent = message;
+            errorElement.style.display = "block";
+        }
+
+        function resetErrorMessages() {
+            var errorElements = document.querySelectorAll(".error");
+            errorElements.forEach(function (element) {
+                element.textContent = "";
+                element.style.display = "none";
+            });
+        }
+
+        function hasError() {
+            var errorElements = document.querySelectorAll(".error");
+            for (var i = 0; i < errorElements.length; i++) {
+                if (errorElements[i].textContent !== "") {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function displayHasilPemesanan() {
+            var hasilNama = document.getElementById("hasil-nama");
+            var hasilEmail = document.getElementById("hasil-email");
+            var hasilJam = document.getElementById("hasil-jam");
+            var hasilTujuan = document.getElementById("hasil-tujuan");
+            var hasilJumlah = document.getElementById("hasil-jumlah");
+
+            hasilNama.textContent = "Nama Pelanggan: " + document.getElementById("nama").value;
+            hasilEmail.textContent = "Email: " + document.getElementById("email").value;
+            hasilJam.textContent = "Jam Keberangkatan: " + document.getElementById("jam").value;
+            hasilTujuan.textContent = "Tujuan Keberangkatan: " + document.getElementById("tujuan").value;
+            hasilJumlah.textContent = "Jumlah Tiket: " + document.getElementById("jumlah").value;
+
+            var hasilPemesanan = document.getElementById("hasil-pemesanan");
+            hasilPemesanan.style.display = "block";
+        }
+    </script>
+</body>
+</html>
